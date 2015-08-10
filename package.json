@@ -1,6 +1,6 @@
 {
   "name": "coz-handlebars-engine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "coz rendering engine with handlebars.",
   "main": "lib",
   "scripts": {
