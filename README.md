@@ -9,15 +9,15 @@ coz-handlebars-engine
 [![Code Coverage][bd_codeclimate_coverage_shield_url]][bd_codeclimate_url]
 [![npm Version][bd_npm_shield_url]][bd_npm_url]
 
-[bd_repo_url]: https://github.com/pon-repo/coz-handlebars-engine
-[bd_travis_url]: http://travis-ci.org/pon-repo/coz-handlebars-engine
-[bd_travis_shield_url]: http://img.shields.io/travis/pon-repo/coz-handlebars-engine.svg?style=flat
-[bd_license_url]: https://github.com/pon-repo/coz-handlebars-engine/blob/master/LICENSE
-[bd_codeclimate_url]: http://codeclimate.com/github/pon-repo/coz-handlebars-engine
-[bd_codeclimate_shield_url]: http://img.shields.io/codeclimate/github/pon-repo/coz-handlebars-engine.svg?style=flat
-[bd_codeclimate_coverage_shield_url]: http://img.shields.io/codeclimate/coverage/github/pon-repo/coz-handlebars-engine.svg?style=flat
-[bd_gemnasium_url]: https://gemnasium.com/pon-repo/coz-handlebars-engine
-[bd_gemnasium_shield_url]: https://gemnasium.com/pon-repo/coz-handlebars-engine.svg
+[bd_repo_url]: https://github.com/coz-repo/coz-handlebars-engine
+[bd_travis_url]: http://travis-ci.org/coz-repo/coz-handlebars-engine
+[bd_travis_shield_url]: http://img.shields.io/travis/coz-repo/coz-handlebars-engine.svg?style=flat
+[bd_license_url]: https://github.com/coz-repo/coz-handlebars-engine/blob/master/LICENSE
+[bd_codeclimate_url]: http://codeclimate.com/github/coz-repo/coz-handlebars-engine
+[bd_codeclimate_shield_url]: http://img.shields.io/codeclimate/github/coz-repo/coz-handlebars-engine.svg?style=flat
+[bd_codeclimate_coverage_shield_url]: http://img.shields.io/codeclimate/coverage/github/coz-repo/coz-handlebars-engine.svg?style=flat
+[bd_gemnasium_url]: https://gemnasium.com/coz-repo/coz-handlebars-engine
+[bd_gemnasium_shield_url]: https://gemnasium.com/coz-repo/coz-handlebars-engine.svg
 [bd_npm_url]: http://www.npmjs.org/package/coz-handlebars-engine
 [bd_npm_shield_url]: http://img.shields.io/npm/v/coz-handlebars-engine.svg?style=flat
 
@@ -56,7 +56,7 @@ var engine = cozHandlebarsEngine({});
 
 License
 -------
-This software is released under the [MIT License](https://github.com/pon-repo/coz-handlebars-engine/blob/master/LICENSE).
+This software is released under the [MIT License](https://github.com/coz-repo/coz-handlebars-engine/blob/master/LICENSE).
 
 <!-- LICENSE End -->
 
