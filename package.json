@@ -1,0 +1,46 @@
+{
+  "name": "coz-handlebars-engine",
+  "version": "1.0.0",
+  "description": "coz rendering engine with handlebars.",
+  "main": "lib",
+  "scripts": {
+    "build": "./ci/build.js",
+    "test": "./ci/test.js",
+    "cover": "./ci/cover.js",
+    "report": "./ci/report.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coz-repo/coz-handlebars-engine.git"
+  },
+  "keywords": [
+    "coz",
+    "engine"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coz-repo/coz-handlebars-engine/issues"
+  },
+  "homepage": "https://github.com/coz-repo/coz-handlebars-engine#readme",
+  "dependencies": {
+    "argx": "^1.1.5",
+    "async": "^1.4.1",
+    "coz-engine": "^1.0.1",
+    "handlebars": "^3.0.3",
+    "mkdirp": "^0.5.1",
+    "stringcase": "^1.0.8"
+  },
+  "devDependencies": {
+    "ape-covering": "^1.0.7",
+    "ape-releasing": "^1.0.13",
+    "ape-reporting": "^1.0.7",
+    "ape-tasking": "^1.0.5",
+    "ape-testing": "^1.1.5",
+    "ape-tmpl": "^1.0.1",
+    "coz": "^1.5.0"
+  }
+}

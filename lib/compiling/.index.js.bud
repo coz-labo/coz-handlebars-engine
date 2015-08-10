@@ -1,0 +1,20 @@
+/**
+ * Bud for index.js
+ */
+
+"use strict";
+
+var indexJsBud = require('coz').factory.indexJsBud;
+
+module.exports = indexJsBud({
+    dirname: __dirname,
+    desc: [
+        'Utility functions for compile source code.'
+    ],
+    module: 'coz-handlebars-engine/lib/compiling'
+});
+
+
+if (!module.parent) {
+    require('coz').render(__filename);
+}

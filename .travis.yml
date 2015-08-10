@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.11'
+before_install: 
+install:
+- npm install
+script:
+- npm run build
+- npm run test
+- npm run cover
+env:
+  global:
+    secure: PG3I3wL+CkhHgAtxBjrp3X0l3VL2LMWqC62OWAg8t7rrrrXsD9Px4tH8gPKKEiYwgz/Qj9MIj0jSIpWF9vgisI7PlFHLnz8ezRP0Pr8zpwZy1ExOAoJrF25cS1pggW1V/lfkyYAaxF0V/uEB2/eMfByl3zf2cDxoLW8TUtx5KYVXeTneksmJr7y5duaHNo/tjfQUxuGN2K5TXzYCMTTOfiXG875ZawcEoRRvMVvLEj+2X1+w9xkqLlTURUXmnoXfSmzTUm/zBCDl3gxUTGII1Hesra53T7obuEc3vmwkTNhJXou5qKQi8nq7HUQvrstD3PYIeXOZY4h0/qKIu0H/bpWlBBj+CFTnP3fdeR+S+MEt1/Vqn3iUYgOI5Rj1RMgR9XFcwafn3rb2K+87pzi2RR5vbT8yQniEjqS/kfvtXJcPFqGROwkuKDKZ0TiLFSBckgRc4+w5Y0N23/1SOAkjQab6smEmkBk4P9OP8zUwLDLy1qy8Mux+8ZeViDNo4hEtZqhA2bbZj+GhuJgLQ9xb46AKcBJhSIkFmkk9WcZheGr3G+/uBNIGvF/5x/E+2AmSPGgWWxvNx8tVNulWT7cGZQnpp/KzGo2etV0lWC7iIrB8J47EDpkGjg/upEMSL9CKfb8F15TEQ5YvAnjGGgKaaIVBgWpRRWm9qJa6SdN4Vzc=
