@@ -4,9 +4,9 @@
 
 "use strict";
 
-var indexJsBud = require('coz').factory.indexJsBud;
+var cozTmpl = require('coz-tmpl');
 
-module.exports = indexJsBud({
+module.exports = cozTmpl.indexJsBud({
     dirname: __dirname,
     desc: [
         'Utility functions for compile source code.'
