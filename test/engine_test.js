@@ -1,16 +1,16 @@
 /**
- * Test case for CozHandlebarsEngine
+ * Test case for Engine
  * Runs with nodeunit.
  */
 
 "use strict";
 
-var HandlebarsEngine = require('../lib/engine.js'),
+var Engine = require('../lib/engine.js'),
     childProcess = require('child_process');
 
 
 exports['Construct a engine.'] = function (test) {
-    var engine = new HandlebarsEngine({});
+    var engine = new Engine({});
     engine.set('foo', 'baz');
     test.equal(engine.foo, 'baz');
     engine.set({'foo': 'quz'});
@@ -23,7 +23,7 @@ exports['Construct a engine.'] = function (test) {
 exports['Register helpers.'] = function (test) {
     var helper01 = function () {
     };
-    var engine = new HandlebarsEngine({
+    var engine = new Engine({
         helpers: {
             foo: helper01
         }
@@ -38,14 +38,14 @@ exports['Register helpers.'] = function (test) {
 };
 
 exports['Precompile template.'] = function (test) {
-    new HandlebarsEngine().precompile('{{name}}', function (err) {
+    new Engine().precompile('{{name}}', function (err) {
         test.ifError(err);
         test.done();
     });
 };
 
 exports['Compile template.'] = function (test) {
-    var engine = new HandlebarsEngine({});
+    var engine = new Engine({});
     engine.compile('Here are {{lowercase name}}.', function (err, tmpl) {
         test.ifError(err);
         test.ok(tmpl);
@@ -56,7 +56,7 @@ exports['Compile template.'] = function (test) {
 
 
 exports['Handle async error.'] = function (test) {
-    new HandlebarsEngine()._tryAsync(function () {
+    new Engine()._tryAsync(function () {
         throw new Error('foo');
     }, function (err) {
         test.ok(!!err);

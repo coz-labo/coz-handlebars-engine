@@ -20,6 +20,7 @@ coz-handlebars-engine
 [bd_gemnasium_shield_url]: https://gemnasium.com/coz-repo/coz-handlebars-engine.svg
 [bd_npm_url]: http://www.npmjs.org/package/coz-handlebars-engine
 [bd_npm_shield_url]: http://img.shields.io/npm/v/coz-handlebars-engine.svg?style=flat
+[bd_bower_badge_url]: https://img.shields.io/bower/v/coz-handlebars-engine.svg?style=flat
 
 <!-- Badge End -->
 
@@ -33,9 +34,13 @@ coz rendering engine with handlebars.
 
 
 
+
 <!-- Sections Start -->
 <a name="sections"></a>
 
+<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
+
+<a name="section-doc-readme-02-usage-md"></a>
 Usage
 ----
 
@@ -46,6 +51,8 @@ var cozHandlebarsEngine = require('coz-handlebars-engine');
 
 var engine = cozHandlebarsEngine({});
 ```
+
+<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
 
 
 <!-- Sections Start -->

@@ -5,14 +5,15 @@
 
 "use strict";
 
-var Engine = require('./engine');
+var Engine = require('./engine'),
+    create = require('./create'),
+    pkg = require('../package.json');
 
+var lib = create.bind(this);
+lib.create = create;
+lib.Engine = Engine;
+lib.helpers = require('./helpers');
+lib.handlebars = require('./handlebars');
+lib.version = pkg.version;
 
-function create(config) {
-    return new Engine(config);
-}
-
-create.helpers = require('./helpers');
-create.handlebars = require('./handlebars');
-
-module.exports = create;
+module.exports = lib;
