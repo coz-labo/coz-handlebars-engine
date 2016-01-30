@@ -17,6 +17,7 @@ exports['Run buildin helpers.'] = function (test) {
     test.equal(helpers.numeric(">=1.2.0"), "1.2.0");
     test.equal(helpers.lowercase("Foo"), "foo");
     test.equal(helpers.snakecase("fooBar"), "foo_bar");
+    test.equal(helpers.constcase("fooBar"), "FOO_BAR");
     test.equal(helpers.pascalcase("foo_bar"), "FooBar");
     test.equal(helpers.sentencecase("foo_bar"), "Foo bar");
     test.equal(helpers.spinalcase("foo_bar"), "foo-bar");
