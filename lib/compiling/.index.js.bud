@@ -2,19 +2,18 @@
  * Bud for index.js
  */
 
-"use strict";
+'use strict'
 
-const cozTmpl = require('coz-tmpl');
+const cozTmpl = require('coz-tmpl')
 
 module.exports = cozTmpl.indexJsBud({
-    dirname: __dirname,
-    desc: [
-        'Utility functions for compile source code.'
-    ],
-    module: 'coz-handlebars-engine/lib/compiling'
-});
-
+  dirname: __dirname,
+  desc: [
+    'Utility functions for compile source code.'
+  ],
+  module: 'coz-handlebars-engine/lib/compiling'
+})
 
 if (!module.parent) {
-    require('coz').render(__filename);
+  require('coz').render(__filename)
 }

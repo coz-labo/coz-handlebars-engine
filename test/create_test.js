@@ -3,18 +3,18 @@
  * Runs with nodeunit.
  */
 
-var create = require('../lib/create.js');
+var create = require('../lib/create.js')
 
 exports.setUp = function(done) {
-    done();
-};
+    done()
+}
 
 exports.tearDown = function(done) {
-    done();
-};
+    done()
+}
 
 exports['Create'] = function(test){
-    test.ok(create({}));
-    test.done();
-};
+    test.ok(create({}))
+    test.done()
+}
 

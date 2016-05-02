@@ -3,18 +3,18 @@
  * Runs with nodeunit.
  */
 
-var handlebars = require('../lib/handlebars.js');
+var handlebars = require('../lib/handlebars.js')
 
 exports.setUp = function(done) {
-    done();
-};
+    done()
+}
 
 exports.tearDown = function(done) {
-    done();
-};
+    done()
+}
 
 exports['Handlebars'] = function(test){
 
-    test.done();
-};
+    test.done()
+}
 

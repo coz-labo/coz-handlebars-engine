@@ -3,19 +3,19 @@
  * Runs with nodeunit.
  */
 
-"use strict";
+'use strict'
 
-var precompileHandlebars = require('../lib/compiling/precompile_handlebars.js');
+const precompileHandlebars = require('../lib/compiling/precompile_handlebars.js')
 
-exports['Compile handlebars file.'] = function (test) {
-    test.equal(precompileHandlebars(null), null);
-    var tmpl = precompileHandlebars('Here are {{toLowercase name}}.', {
-        helpers: {
-            toLowercase: function (str) {
-                return str.toLowerCase();
-            }
-        }
-    });
-    test.ok(tmpl);
-    test.done();
-};
+exports[ 'Compile handlebars file.' ] = function (test) {
+  test.equal(precompileHandlebars(null), null)
+  var tmpl = precompileHandlebars('Here are {{toLowercase name}}.', {
+    helpers: {
+      toLowercase: function (str) {
+        return str.toLowerCase()
+      }
+    }
+  })
+  test.ok(tmpl)
+  test.done()
+}

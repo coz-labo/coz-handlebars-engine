@@ -1,5 +1,5 @@
-"use strict";
+'use strict'
 
-const cozHandlebarsEngine = require('coz-handlebars-engine');
+const cozHandlebarsEngine = require('coz-handlebars-engine')
 
-let engine = cozHandlebarsEngine({});
+let engine = cozHandlebarsEngine({})

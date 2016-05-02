@@ -2,19 +2,20 @@
  * Test case for createHandlebars.
  * Runs with nodeunit.
  */
+'use strict'
 
-var createHandlebars = require('../lib/compiling/create_handlebars.js');
+const createHandlebars = require('../lib/compiling/create_handlebars.js')
 
 exports.setUp = function (done) {
-    done();
-};
+  done()
+}
 
 exports.tearDown = function (done) {
-    done();
-};
+  done()
+}
 
-exports['Create handlebars'] = function (test) {
-    test.ok(createHandlebars({}));
-    test.done();
-};
+exports[ 'Create handlebars' ] = function (test) {
+  test.ok(createHandlebars({}))
+  test.done()
+}
 
