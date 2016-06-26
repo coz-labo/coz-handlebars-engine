@@ -1,9 +1,14 @@
 'use strict'
 
+const assert = require('assert')
+const co = require('co')
+
 const index = require('../lib/index')
-exports[ 'Eval properties.' ] = function (test) {
-  test.ok(index)
-  test.ok(index.helpers)
-  test.ok(index.handlebars)
-  test.done()
-}
+
+it('Eval properties.', () => co(function * () {
+  assert.ok(index)
+  assert.ok(index.helpers)
+  assert.ok(index.handlebars)
+}))
+
+/* global describe, it */

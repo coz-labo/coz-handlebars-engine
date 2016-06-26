@@ -7,19 +7,20 @@
 
 const Engine = require('../lib/engine.js')
 const childProcess = require('child_process')
+const assert = require('assert')
+const co = require('co')
 
-exports[ 'Construct a engine.' ] = function (test) {
+it('Construct a engine.', () => co(function * () {
   var engine = new Engine({})
   engine.set('foo', 'baz')
-  test.equal(engine.foo, 'baz')
+  assert.equal(engine.foo, 'baz')
   engine.set({ 'foo': 'quz' })
-  test.equal(engine.foo, 'quz')
-  test.equal(engine.get('foo'), 'quz')
-  test.equal(engine.clone().foo, 'quz')
-  test.done()
-}
+  assert.equal(engine.foo, 'quz')
+  assert.equal(engine.get('foo'), 'quz')
+  assert.equal(engine.clone().foo, 'quz')
+}))
 
-exports[ 'Register helpers.' ] = function (test) {
+it('Register helpers.', () => co(function * () {
   let helper01 = function () {
   }
   let engine = new Engine({
@@ -29,37 +30,35 @@ exports[ 'Register helpers.' ] = function (test) {
   })
   engine.registerHelper('bar', helper01)
   engine.registerHelpers({ baz: helper01 })
-  test.ok(engine.helpers)
-  test.ok(engine.helpers.foo)
-  test.ok(engine.helpers.bar)
-  test.ok(engine.helpers.baz)
-  test.done()
-}
+  assert.ok(engine.helpers)
+  assert.ok(engine.helpers.foo)
+  assert.ok(engine.helpers.bar)
+  assert.ok(engine.helpers.baz)
+}))
 
-exports[ 'Precompile template.' ] = function (test) {
+it('Precompile template.', () => co(function * () {
   new Engine().precompile('{{name}}', function (err) {
-    test.ifError(err)
-    test.done()
+    assert.ifError(err)
   })
-}
+}))
 
-exports[ 'Compile template.' ] = function (test) {
+it('Compile template.', () => co(function * () {
   var engine = new Engine({})
   engine.compile('Here are {{lowercase name}}.', function (err, tmpl) {
-    test.ifError(err)
-    test.ok(tmpl)
-    test.equal(tmpl({ name: 'Red Apples' }), 'Here are red apples.')
-    test.done()
-  })
-}
+    assert.ifError(err)
+    assert.ok(tmpl)
+    assert.equal(tmpl({ name: 'Red Apples' }), 'Here are red apples.')
 
-exports[ 'Handle async error.' ] = function (test) {
+  })
+}))
+
+it('Handle async error.', () => co(function * () {
   new Engine()._tryAsync(function () {
     throw new Error('foo')
   }, function (err) {
-    test.ok(!!err)
-    test.done()
+    assert.ok(!!err)
+
   })
-}
+}))
 
-
+/* global describe, it */

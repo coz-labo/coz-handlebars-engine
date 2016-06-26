@@ -7,13 +7,13 @@
 const pkg = require('../package.json')
 
 module.exports = {
-    force: true,
-    mode: '444',
-    data: {
-        pkg: pkg
-    }
+  force: true,
+  mode: '444',
+  data: {
+    pkg: pkg
+  }
 }
 
 if (!module.parent) {
-    require('coz').render(__filename)
+  require('coz').render(__filename)
 }

@@ -6,16 +6,19 @@
 'use strict'
 
 const precompileHandlebars = require('../lib/compiling/precompile_handlebars.js')
+const assert = require('assert')
+const co = require('co')
 
-exports[ 'Compile handlebars file.' ] = function (test) {
-  test.equal(precompileHandlebars(null), null)
-  var tmpl = precompileHandlebars('Here are {{toLowercase name}}.', {
+it('Compile handlebars file.', () => co(function * () {
+  assert.equal(precompileHandlebars(null), null)
+  let tmpl = precompileHandlebars('Here are {{toLowercase name}}.', {
     helpers: {
       toLowercase: function (str) {
         return str.toLowerCase()
       }
     }
   })
-  test.ok(tmpl)
-  test.done()
-}
+  assert.ok(tmpl)
+}))
+
+/* global describe, it */

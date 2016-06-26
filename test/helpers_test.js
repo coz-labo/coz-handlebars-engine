@@ -2,31 +2,34 @@
 
 const helpers = require('../lib/helpers')
 const childProcess = require('child_process')
+const assert = require('assert')
+const co = require('co')
 
-exports[ 'Run buildin helpers.' ] = function (test) {
-  test.ok(helpers)
-  test.equal(helpers.basename(null), "null")
-  test.equal(helpers.basename("foo/bar.js"), "bar.js")
-  test.equal(helpers.braces("foo"), "{foo}")
-  test.equal(helpers.camelcase("foo_bar"), "fooBar")
-  test.equal(helpers.dirname("foo/bar.js"), "foo")
-  test.equal(helpers.extname("foo/bar.js"), ".js")
+it('Run buildin helpers.', () => co(function * () {
+  assert.ok(helpers)
+  assert.equal(helpers.basename(null), "null")
+  assert.equal(helpers.basename("foo/bar.js"), "bar.js")
+  assert.equal(helpers.braces("foo"), "{foo}")
+  assert.equal(helpers.camelcase("foo_bar"), "fooBar")
+  assert.equal(helpers.dirname("foo/bar.js"), "foo")
+  assert.equal(helpers.extname("foo/bar.js"), ".js")
   if (childProcess.execSync) {
-    test.ok(helpers.eval("ls"))
+    assert.ok(helpers.eval("ls"))
   }
-  test.equal(helpers.numeric(">=1.2.0"), "1.2.0")
-  test.equal(helpers.lowercase("Foo"), "foo")
-  test.equal(helpers.snakecase("fooBar"), "foo_bar")
-  test.equal(helpers.constcase("fooBar"), "FOO_BAR")
-  test.equal(helpers.pascalcase("foo_bar"), "FooBar")
-  test.equal(helpers.sentencecase("foo_bar"), "Foo bar")
-  test.equal(helpers.spinalcase("foo_bar"), "foo-bar")
-  test.equal(helpers.pathcase("foo_bar"), "foo/bar")
-  test.equal(helpers.titlecase("foo_bar"), "Foo Bar")
-  test.equal(helpers.uppercase("foo_bar"), "FOO_BAR")
-  test.equal(helpers.read('_not_existing_filename'), '')
-  test.equal(helpers.json({ foo: 'bar' }), '{"foo":"bar"}')
+  assert.equal(helpers.numeric(">=1.2.0"), "1.2.0")
+  assert.equal(helpers.lowercase("Foo"), "foo")
+  assert.equal(helpers.snakecase("fooBar"), "foo_bar")
+  assert.equal(helpers.constcase("fooBar"), "FOO_BAR")
+  assert.equal(helpers.pascalcase("foo_bar"), "FooBar")
+  assert.equal(helpers.sentencecase("foo_bar"), "Foo bar")
+  assert.equal(helpers.spinalcase("foo_bar"), "foo-bar")
+  assert.equal(helpers.pathcase("foo_bar"), "foo/bar")
+  assert.equal(helpers.titlecase("foo_bar"), "Foo Bar")
+  assert.equal(helpers.uppercase("foo_bar"), "FOO_BAR")
+  assert.equal(helpers.read('_not_existing_filename'), '')
+  assert.equal(helpers.json({ foo: 'bar' }), '{"foo":"bar"}')
 
-  test.ok(helpers.render(__filename, { data: { root: {} } }))
-  test.done()
-}
+  assert.ok(helpers.render(__filename, { data: { root: {} } }))
+}))
+
+/* global describe, it */

@@ -1,21 +1,27 @@
 /**
  * Test case for createHandlebars.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
 'use strict'
 
 const createHandlebars = require('../lib/compiling/create_handlebars.js')
+const assert = require('assert')
+const co = require('co')
 
-exports.setUp = function (done) {
-  done()
-}
+describe('create-handlebars', function () {
+  this.timeout(3000)
 
-exports.tearDown = function (done) {
-  done()
-}
+  before(() => co(function * () {
 
-exports[ 'Create handlebars' ] = function (test) {
-  test.ok(createHandlebars({}))
-  test.done()
-}
+  }))
 
+  after(() => co(function * () {
+
+  }))
+
+  it('Create handlebars', () => co(function * () {
+
+  }))
+})
+
+/* global describe, before, after, it */
