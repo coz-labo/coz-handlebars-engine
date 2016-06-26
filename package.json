@@ -1,6 +1,6 @@
 {
   "name": "coz-handlebars-engine",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "coz rendering engine with handlebars.",
   "main": "lib",
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "ape-covering": "^3.0.3",
-    "ape-releasing": "^3.1.2",
+    "ape-releasing": "^4.0.1",
     "ape-reporting": "^3.0.1",
     "ape-tasking": "^4.0.2",
     "ape-testing": "^4.0.0",
