@@ -85,7 +85,10 @@ This software is released under the [MIT License](https://github.com/coz-repo/co
 Links
 ------
 
-+ [coz](https://github.com/coz-repo/coz)
-+ [coz-engine](https://github.com/coz-repo/coz-engine)
++ [coz][coz_url]
++ [coz-engine][coz_engine_url]
+
+[coz_url]: https://github.com/coz-repo/coz
+[coz_engine_url]: https://github.com/coz-repo/coz-engine
 
 <!-- Links End -->
