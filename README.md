@@ -89,7 +89,7 @@ Links
 + [coz][coz_url]
 + [coz-engine][coz_engine_url]
 
-[coz_url]: https://github.com/coz-repo/coz
-[coz_engine_url]: https://github.com/coz-repo/coz-engine
+[coz_url]: https://github.com/coz-labo/coz
+[coz_engine_url]: https://github.com/coz-labo/coz-engine
 
 <!-- Links End -->

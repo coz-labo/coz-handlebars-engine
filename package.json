@@ -1,6 +1,6 @@
 {
   "name": "coz-handlebars-engine",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "coz rendering engine with handlebars.",
   "main": "lib",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/coz-labo/coz-handlebars-engine#readme",
   "dependencies": {
-    "coz-engine": "^2.0.3",
+    "coz-engine": "^2.0.4",
     "handlebars": "^4.0.5",
     "mkdirp": "^0.5.1",
     "stringcase": "^3.0.1"
@@ -35,7 +35,7 @@
     "ape-testing": "^4.0.1",
     "ape-tmpl": "^5.0.13",
     "ape-updating": "^4.0.4",
-    "coz": "^6.0.12"
+    "coz": "^6.0.13"
   },
   "engines": {
     "node": ">=6",
