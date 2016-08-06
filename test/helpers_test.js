@@ -7,16 +7,13 @@ const co = require('co')
 
 it('Run buildin helpers.', () => co(function * () {
   assert.ok(helpers)
-  assert.equal(helpers.basename(null), "null")
-  assert.equal(helpers.basename("foo/bar.js"), "bar.js")
-  assert.equal(helpers.braces("foo"), "{foo}")
-  assert.equal(helpers.camelcase("foo_bar"), "fooBar")
-  assert.equal(helpers.dirname("foo/bar.js"), "foo")
-  assert.equal(helpers.extname("foo/bar.js"), ".js")
-  if (childProcess.execSync) {
-    assert.ok(helpers.eval("ls"))
-  }
-  assert.equal(helpers.numeric(">=1.2.0"), "1.2.0")
+  assert.equal(helpers.basename(null), 'null')
+  assert.equal(helpers.basename('foo/bar.js'), 'bar.js')
+  assert.equal(helpers.braces('foo'), '{foo}')
+  assert.equal(helpers.camelcase('foo_bar'), 'fooBar')
+  assert.equal(helpers.dirname('foo/bar.js'), 'foo')
+  assert.equal(helpers.extname('foo/bar.js'), '.js')
+  assert.equal(helpers.numeric('>=1.2.0'), '1.2.0')
   assert.equal(helpers.lowercase("Foo"), "foo")
   assert.equal(helpers.snakecase("fooBar"), "foo_bar")
   assert.equal(helpers.constcase("fooBar"), "FOO_BAR")
