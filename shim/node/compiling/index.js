@@ -1,0 +1,19 @@
+/**
+ * Utility functions for compile source code.
+ * @module coz-handlebars-engine/lib/compiling
+ */
+
+'use strict';
+
+module.exports = {
+  get compileHandlebars() {
+    return require('./compile_handlebars');
+  },
+  get createHandlebars() {
+    return require('./create_handlebars');
+  },
+  get precompileHandlebars() {
+    return require('./precompile_handlebars');
+  }
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJjb21waWxlSGFuZGxlYmFycyIsInJlcXVpcmUiLCJjcmVhdGVIYW5kbGViYXJzIiwicHJlY29tcGlsZUhhbmRsZWJhcnMiXSwibWFwcGluZ3MiOiJBQUFBOzs7OztBQUtBOztBQUVBQSxPQUFPQyxPQUFQLEdBQWlCO0FBQ2IsTUFBSUMsaUJBQUosR0FBd0I7QUFBRSxXQUFPQyxRQUFRLHNCQUFSLENBQVA7QUFBd0MsR0FEckQ7QUFFYixNQUFJQyxnQkFBSixHQUF1QjtBQUFFLFdBQU9ELFFBQVEscUJBQVIsQ0FBUDtBQUF1QyxHQUZuRDtBQUdiLE1BQUlFLG9CQUFKLEdBQTJCO0FBQUUsV0FBT0YsUUFBUSx5QkFBUixDQUFQO0FBQTJDO0FBSDNELENBQWpCIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6ImxpYiIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVXRpbGl0eSBmdW5jdGlvbnMgZm9yIGNvbXBpbGUgc291cmNlIGNvZGUuXG4gKiBAbW9kdWxlIGNvei1oYW5kbGViYXJzLWVuZ2luZS9saWIvY29tcGlsaW5nXG4gKi9cblxuJ3VzZSBzdHJpY3QnXG5cbm1vZHVsZS5leHBvcnRzID0ge1xuICAgIGdldCBjb21waWxlSGFuZGxlYmFycygpIHsgcmV0dXJuIHJlcXVpcmUoJy4vY29tcGlsZV9oYW5kbGViYXJzJykgfSxcbiAgICBnZXQgY3JlYXRlSGFuZGxlYmFycygpIHsgcmV0dXJuIHJlcXVpcmUoJy4vY3JlYXRlX2hhbmRsZWJhcnMnKSB9LFxuICAgIGdldCBwcmVjb21waWxlSGFuZGxlYmFycygpIHsgcmV0dXJuIHJlcXVpcmUoJy4vcHJlY29tcGlsZV9oYW5kbGViYXJzJykgfVxufSJdfQ==

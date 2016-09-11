@@ -7,13 +7,11 @@
 
 const Engine = require('./engine')
 const create = require('./create')
-const pkg = require('../package.json')
 
 let lib = create.bind(this)
 lib.create = create
 lib.Engine = Engine
 lib.helpers = require('./helpers')
 lib.handlebars = require('./handlebars')
-lib.version = pkg.version
 
 module.exports = lib
