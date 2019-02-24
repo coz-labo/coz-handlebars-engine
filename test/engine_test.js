@@ -8,9 +8,9 @@
 const Engine = require('../lib/engine.js')
 const childProcess = require('child_process')
 const assert = require('assert')
-const co = require('co')
 
-it('Construct a engine.', () => co(function * () {
+
+it('Construct a engine.', async () => {
   var engine = new Engine({})
   engine.set('foo', 'baz')
   assert.equal(engine.foo, 'baz')
@@ -18,9 +18,9 @@ it('Construct a engine.', () => co(function * () {
   assert.equal(engine.foo, 'quz')
   assert.equal(engine.get('foo'), 'quz')
   assert.equal(engine.clone().foo, 'quz')
-}))
+})
 
-it('Register helpers.', () => co(function * () {
+it('Register helpers.', async () => {
   let helper01 = function () {
   }
   let engine = new Engine({
@@ -34,15 +34,15 @@ it('Register helpers.', () => co(function * () {
   assert.ok(engine.helpers.foo)
   assert.ok(engine.helpers.bar)
   assert.ok(engine.helpers.baz)
-}))
+})
 
-it('Precompile template.', () => co(function * () {
+it('Precompile template.', async () => {
   new Engine().precompile('{{name}}', function (err) {
     assert.ifError(err)
   })
-}))
+})
 
-it('Compile template.', () => co(function * () {
+it('Compile template.', async () => {
   var engine = new Engine({})
   engine.compile('Here are {{lowercase name}}.', function (err, tmpl) {
     assert.ifError(err)
@@ -50,15 +50,15 @@ it('Compile template.', () => co(function * () {
     assert.equal(tmpl({ name: 'Red Apples' }), 'Here are red apples.')
 
   })
-}))
+})
 
-it('Handle async error.', () => co(function * () {
+it('Handle async error.', async () => {
   new Engine()._tryAsync(function () {
     throw new Error('foo')
   }, function (err) {
     assert.ok(!!err)
 
   })
-}))
+})
 
 /* global describe, it */

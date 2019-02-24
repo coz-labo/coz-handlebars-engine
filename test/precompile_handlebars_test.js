@@ -7,9 +7,9 @@
 
 const precompileHandlebars = require('../lib/compiling/precompile_handlebars.js')
 const assert = require('assert')
-const co = require('co')
 
-it('Compile handlebars file.', () => co(function * () {
+
+it('Compile handlebars file.', async () => {
   assert.equal(precompileHandlebars(null), null)
   let tmpl = precompileHandlebars('Here are {{toLowercase name}}.', {
     helpers: {
@@ -19,6 +19,6 @@ it('Compile handlebars file.', () => co(function * () {
     }
   })
   assert.ok(tmpl)
-}))
+})
 
 /* global describe, it */
